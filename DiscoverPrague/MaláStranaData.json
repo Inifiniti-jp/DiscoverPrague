@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "header": "SAINT NICOLAS CHURCH",
+        "description": "A stunning Baroque masterpiece with a grand dome and breathtaking frescoes in the heart of Malá Strana.",
+        "image": "saint_nicolas_church",
+        "separator": "malástrana",
+    },
+    {
+        "id": 2,
+        "header": "FRANZ KAFKA MUSEUM",
+        "description": "A surreal journey into the mind of Kafka, featuring eerie exhibits and his literary legacy.",
+        "image": "franz_kafka_museum",
+        "modelName": "malástrana",
+    },
+    {
+        "id": 3,
+        "header": "WERICH'S VILLA",
+        "description": "A historic riverside house celebrating Czech culture, humor, and the life of playwright Jan Werich.",
+        "image": "werichs_villa",
+        "separator": "malástrana",
+    },
+    {
+        "id": 4,
+        "header": "KAMPA",
+        "description": "A charming island oasis with picturesque views, art installations, and hidden corners along the Vltava River.",
+        "image": "kampa",
+        "separator": "malástrana",
+    },
+    {
+        "id": 5,
+        "header": "CRALWING BABIES",
+        "description": "Giant, faceless sculptures by David Černý that add a bizarre touch to Prague’s modern art scene.",
+        "image": "crawling_babies",
+        "separator": "malástrana",
+    },
+    {
+        "id": 6,
+        "header": "MUSEUM OF ALCHEMISTS AND MAGICIANS OF OLD PRAGUE",
+        "description": "A mystical museum revealing the secrets of Prague’s alchemical past and occult legends.",
+        "image": "museum_of_alchemists",
+        "separator": "malástrana",
+    }
+]
+

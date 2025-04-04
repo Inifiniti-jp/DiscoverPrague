@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "63DC944A-999F-4199-B779-E5F33652EAFB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:DiscoverPrague.xcodeproj",
+      "identifier" : "65C051F42D465C97007328DD",
+      "name" : "DiscoverPrague"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DiscoverPrague.xcodeproj",
+        "identifier" : "65C0520F2D465C99007328DD",
+        "name" : "DiscoverPragueTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "BEGINNINGS",
+        "description": "Prague’s origins date back to the 9th century when the Přemyslid dynasty founded a castle above the Vltava River.",
+        "imageName": "prague_conception",
+        "modelName": "Antonio Molina Statue Malaga",
+        "backgroundColor": ".red"
+    },
+    {
+        "id": 2,
+        "name": "CHARLES BRIDGE",
+        "description": "A famous bridge connecting the Old Town with Lesser Town.",
+        "imageName": "charles_bridge",
+        "modelName": "Prague",
+        "backgroundColor": ".blue"
+    },
+    {
+        "id": 3,
+        "name": "LETNÁ",
+        "description": "A vibrant district known for its large park, beer gardens, and stunning city views.",
+        "imageName": "letná",
+        "modelName": "Prague",
+        "backgroundColor": ".blue"
+    },
+    {
+        "id": 4,
+        "name": "MALÁ STRANA",
+        "description": "A historic and picturesque area with Baroque architecture and charming narrow streets.",
+        "imageName": "malá_strana",
+        "modelName": "Prague",
+        "backgroundColor": ".blue"
+    },
+    {
+        "id": 5,
+        "name": "ŽIŽKOV",
+        "description": "A lively, alternative neighborhood famous for its nightlife and the iconic TV Tower.",
+        "imageName": "žižkov",
+        "modelName": "Prague",
+        "backgroundColor": ".blue"
+    },
+    {
+        "id": 6,
+        "name": "HOLEŠOVICE",
+        "description": "A trendy, evolving district blending art, industry, and modern cafés.",
+        "imageName": "holešovice",
+        "modelName": "Prague",
+        "backgroundColor": ".blue"
+    }
+]
+

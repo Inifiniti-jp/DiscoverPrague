@@ -24,6 +24,7 @@
 		65C051F52D465C97007328DD /* DiscoverPrague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverPrague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C051F92D465C97007328DD /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		65C052102D465C99007328DD /* DiscoverPragueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscoverPragueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C052BE2D4EB365007328DD /* DiscoverPrague.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DiscoverPrague.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -74,6 +75,7 @@
 		65C051EC2D465C97007328DD = {
 			isa = PBXGroup;
 			children = (
+				65C052BE2D4EB365007328DD /* DiscoverPrague.xctestplan */,
 				65C051F72D465C97007328DD /* DiscoverPrague */,
 				65C051F82D465C97007328DD /* Packages */,
 				65C052132D465C99007328DD /* DiscoverPragueTests */,

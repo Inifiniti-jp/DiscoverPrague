@@ -1,0 +1,23 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.60.4)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Popravis_te__Starome_stske__Na_me_sti__Praha" (
+        active = true
+        prepend references = @Popraviště Staroměstské Náměstí Praha.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        float3 xformOp:translate = (0.0022326105, 0, -0.0012692213)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
