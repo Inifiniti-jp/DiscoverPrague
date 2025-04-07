@@ -26,7 +26,7 @@ extension View {
 struct DescriptionTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 50, weight: .bold, design: .monospaced))
+            .font(.system(size: 50, weight: .medium, design: .monospaced))
             .padding(10)
             .shadow(radius: 20)
             .multilineTextAlignment(.center)

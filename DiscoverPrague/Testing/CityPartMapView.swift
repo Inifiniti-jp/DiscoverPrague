@@ -9,19 +9,30 @@ import SwiftUI
 import MapKit
 
 struct CityPartMapView: View {
-    @ObservedObject var viewModel = CityViewModel()
+    @State private var scene: MKLookAroundScene?
+    let coordinate: CLLocationCoordinate2D
+    @State private var map = false
+    
     var body: some View {
-        Map(initialPosition: .region(MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 50.088218898410375, longitude: 14.402906651305639),
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        ))) {
-            Marker("Test", systemImage: "mappin.circle.fill", coordinate: CLLocationCoordinate2D(latitude: 50.088218898410375, longitude: 14.402906651305639))
-                }
-        .clipShape(Circle())
+        ZStack {
+            if scene != nil {
+                LookAroundPreview(scene: $scene)
+                    .lookAroundViewer(isPresented: $map, initialScene: scene)
+                    .clipShape(Circle())
+                    .frame(maxWidth: 500)
+
+            } else {
+                ProgressView("Loading Look Around...")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-
+        .task {
+            let request = MKLookAroundSceneRequest(coordinate: coordinate)
+            scene = try? await request.scene
+        }
+    }
+}
 
 #Preview {
-    CityPartMapView()
+    CityPartMapView(coordinate: CLLocationCoordinate2D(latitude: 50.1096, longitude: 14.1))
 }

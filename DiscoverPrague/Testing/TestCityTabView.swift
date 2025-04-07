@@ -27,6 +27,13 @@ struct TestCityPartTabView: View {
                             .scaledToFill()
                             .ignoresSafeArea()
                         
+                        LinearGradient(
+                                gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
+                                startPoint: .bottom,
+                                endPoint: .top
+                            )
+                            .ignoresSafeArea()
+                        
                         HStack {
                             VStack {
                                 Text(part.cityPartHeader)
@@ -35,7 +42,7 @@ struct TestCityPartTabView: View {
                                 Text(part.cityPartDescription)
                                     .descriptionTextStyle()
                                 
-                                NavigationLink(destination: CityDetailView(city: part)) {
+                                NavigationLink(destination: CityPartDetailView(city: part)) {
                                     Text("Open Details")
                                 }
                                 .padding()

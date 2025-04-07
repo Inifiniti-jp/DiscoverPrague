@@ -18,8 +18,7 @@ struct ContentView: View {
             ZStack {
                 Image("letná")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.all)
+                    .scaledToFill()                .ignoresSafeArea(.all)
                 
                 VStack {
                     Text("Discover Prague")
@@ -31,13 +30,6 @@ struct ContentView: View {
                         .opacity(isAnimating ? 1 : 0.5)
                         .animation(.easeInOut(duration: 2), value: isAnimating)
                         .padding()
-                }
-            }
-            .toolbar {
-                Button {
-                    //
-                } label: {
-                    Image(systemName: "magnifyingglass")
                 }
             }
         }
