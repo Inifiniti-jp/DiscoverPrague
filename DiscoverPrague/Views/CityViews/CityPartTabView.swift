@@ -9,42 +9,42 @@ import SwiftUI
 
 struct CityPartTabView: View {
     @StateObject private var viewModel = CityViewModel()
-    @State private var isAnimating = false
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     var separator: String
     var filteredCityParts: [CityPart] {
         viewModel.cityAreas.first(where: { $0.separator == separator })?.cityParts ?? []
     }
     
     var body: some View {
-        TabView {
-            ForEach(filteredCityParts) { part in
-                ZStack {
-                    Image(part.cityPartImage)
-                        .resizable()
-                        .scaledToFill()
-                        .ignoresSafeArea(.all)
-                    
-                    VStack {
-                        Text(part.cityPartHeader)
-                            .headerTextStyle()
-                            .scaleEffect(isAnimating ? 1 : 0)
-                            .animation(.easeInOut(duration: 2), value: isAnimating)
+        NavigationStack {
+            TabView {
+                ForEach(filteredCityParts) { part in
+                    ZStack {
+                        Image(part.cityPartImage)
+                            .resizable()
+                            .scaledToFill()
+                            .ignoresSafeArea()
                         
-                        Text(part.cityPartDescription)
-                            .descriptionTextStyle()
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .offset(y: isAnimating ? 0 : 300)
-                            .animation(.easeInOut(duration: 2), value: isAnimating)
+                        HStack {
+                            VStack {
+                                Text(part.cityPartHeader)
+                                    .headerTextStyle()
+                                
+                                Text(part.cityPartDescription)
+                                    .descriptionTextStyle()
+                                
+                                NavigationLink(destination: CityDetailView(city: part)) {
+                                    Text("Open Details")
+                                }
+                                .padding()
+                            }
+                        }
                     }
-                    .padding()
                 }
             }
-        }
-        .tabViewStyle(.page)
-        .ignoresSafeArea(.all)
-        .onAppear {
-            isAnimating = true
+            .tabViewStyle(.page)
+            .ignoresSafeArea(.all)
         }
     }
 }

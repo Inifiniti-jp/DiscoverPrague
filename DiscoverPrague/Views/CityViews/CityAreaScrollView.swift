@@ -16,7 +16,7 @@ struct CityAreaScrollView: View {
                 HStack {
                     ForEach(viewModel.cityAreas, id: \.header) {
                         location in
-                        NavigationLink(destination: CityPartTabView(separator: location.separator)) {
+                        NavigationLink(destination: TestCityPartTabView(separator: location.separator)) {
                             ZStack {
                                 Image(location.image)
                                     .resizable()

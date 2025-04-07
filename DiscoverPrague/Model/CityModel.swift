@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 struct CityArea: Codable, Identifiable {
     var id = UUID()
@@ -26,7 +27,14 @@ struct CityPart: Codable, Identifiable {
     let cityPartDescription: String
     let cityPartImage: String
     let cityPartModel: String
+    let cityPartLat: Double
+    let cityPartLon: Double
+    let cityPartGallery: [String]
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: cityPartLat, longitude: cityPartLon)
+    }
+    
     private enum CodingKeys: String, CodingKey {
-            case cityPart, cityPartHeader, cityPartDescription, cityPartImage, cityPartModel
+            case cityPart, cityPartHeader, cityPartDescription, cityPartImage, cityPartModel, cityPartLat, cityPartLon, cityPartGallery
         }
     }

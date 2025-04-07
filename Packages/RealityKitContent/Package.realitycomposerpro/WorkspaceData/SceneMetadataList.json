@@ -40,6 +40,16 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
+        "Castle_FBX",
+        "castle"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
         "Material"
       ],
       {
@@ -80,30 +90,11 @@
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Castle_FBX",
-        "castle"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
       }
     ]
   },
   "B5028534-608A-4756-B329-D095F0AA4317" : {
     "objectMetadataList" : [
-      [
-        "B5028534-608A-4756-B329-D095F0AA4317",
-        "Root",
-        "Cube"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
       [
         "B5028534-608A-4756-B329-D095F0AA4317",
         "Root"

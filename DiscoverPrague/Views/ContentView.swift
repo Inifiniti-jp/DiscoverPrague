@@ -12,7 +12,6 @@ import RealityKitContent
 struct ContentView: View {
     @State private var isAnimating = false
     @State private var hasAnimated = false
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
     
     var body: some View {
         NavigationStack {
@@ -29,8 +28,8 @@ struct ContentView: View {
                         .animation(.bouncy(duration: 3), value: isAnimating)
                     
                     CityAreaScrollView()
-                        .offset(y: isAnimating ? 0 : 500)
-                        .animation(.easeInOut(duration: 3), value: isAnimating)
+                        .opacity(isAnimating ? 1 : 0.5)
+                        .animation(.easeInOut(duration: 2), value: isAnimating)
                         .padding()
                 }
             }
@@ -40,10 +39,7 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "magnifyingglass")
                 }
-
-
             }
-            
         }
         
         // MARK: Defines the logic so that the animation occurs only once when the view is first rendered, so that it does not repeat every single time the view reappears.

@@ -9,42 +9,60 @@
                 "cityPartHeader": "SAINT NICOLAS CHURCH",
                 "cityPartDescription": "A stunning Baroque church with a majestic dome and richly decorated interior in Malá Strana.",
                 "cityPartImage": "saint_nicolas_church",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "franzkafkamuseum",
                 "cityPartHeader": "FRANZ KAFKA MUSEUM",
                 "cityPartDescription": "An eerie, poetic dive into Kafka’s surreal world, with atmospheric exhibits and haunting installations.",
                 "cityPartImage": "franz_kafka_museum",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "charlesbridge",
                 "cityPartHeader": "CHARLES BRIDGE",
                 "cityPartDescription": "Prague’s iconic stone bridge lined with statues and artists, connecting the Old Town and Castle District.",
                 "cityPartImage": "charles_bridge",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "kampa",
                 "cityPartHeader": "KAMPA",
                 "cityPartDescription": "A peaceful island along the Vltava, perfect for riverside walks, modern art, and quiet cafés.",
                 "cityPartImage": "kampa",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "crawlingbabies",
                 "cityPartHeader": "CRAWLING BABIES",
                 "cityPartDescription": "Quirky giant sculptures by David Černý crawling up the Žižkov TV Tower — weird, fun, unforgettable.",
                 "cityPartImage": "crawling_babies",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "werichsvilla",
                 "cityPartHeader": "WERICH'S VILLA",
                 "cityPartDescription": "Nestled on Kampa Island, Werich’s Villa is a cultural gem celebrating the life and legacy of Czech actor and writer Jan Werich.",
                 "cityPartImage": "werichs_villa",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             }
         ]
     },
@@ -58,28 +76,40 @@
                 "cityPartHeader": "STALIN",
                 "cityPartDescription": "Once home to the world’s largest Stalin statue, this spot is now a vibrant skatepark with iconic city views.",
                 "cityPartImage": "letná_stalin",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum", "holešovice", "national_technical_museum"]
             },
             {
                 "cityPart": "letnabeergarden",
                 "cityPartHeader": "LETNÁ BEER GARDEN",
                 "cityPartDescription": "Under shady chestnut trees, sip cold Pilsner with locals while overlooking the rooftops of Old Town.",
                 "cityPartImage": "letna_beer_garden",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "nationaltechnicalmuseum",
                 "cityPartHeader": "NATIONAL TECHNICAL MUSEUM",
                 "cityPartDescription": "A treasure trove of Czech innovation — from vintage cars and planes to old printing presses and astronomical devices.",
                 "cityPartImage": "national_technical_museum",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "letnapark",
                 "cityPartHeader": "LETNÁ PARK",
                 "cityPartDescription": "Wide open lawns, tree-lined paths, and some of the best sunset spots in the city — a green heart above Prague.",
                 "cityPartImage": "letná_park",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             }
         ]
     },
@@ -93,42 +123,60 @@
                 "cityPartHeader": "VNITROBLOCK",
                 "cityPartDescription": "A hidden gem combining a café, art space, sneaker store, and dance studio — the soul of Holešovice’s hip scene.",
                 "cityPartImage": "vnitroblock",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "trojabridge",
                 "cityPartHeader": "TROJA BRIDGE",
                 "cityPartDescription": "A sleek, modern arch bridge connecting Holešovice with Troja, known for its elegant curves and striking white design.",
                 "cityPartImage": "troja_bridge",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "stromovka",
                 "cityPartHeader": "STROMOVKA PARK",
                 "cityPartDescription": "One of Prague’s largest parks — ideal for picnics, jogging, or a lakeside coffee break just steps from the city.",
                 "cityPartImage": "stromovka",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "dox",
                 "cityPartHeader": "DOX Centre",
                 "cityPartDescription": "A bold industrial space turned cutting-edge gallery showcasing provocative exhibitions and modern thought.",
                 "cityPartImage": "doxcentre",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "prazskatrznice",
                 "cityPartHeader": "PRAGUE MARKET HALL",
                 "cityPartDescription": "An evolving marketplace blending Vietnamese food stalls, local produce, art spaces, and cultural events.",
                 "cityPartImage": "prazskatrznice",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             },
             {
                 "cityPart": "veletrznipalace",
                 "cityPartHeader": "VELETRŽNÍ PALACE",
                 "cityPartDescription": "Modern art lives here — explore works by Picasso, Klimt, and Czech masters in a massive functionalist building.",
                 "cityPartImage": "veletrzni_palace",
-                "cityPartModel": "Prague"
+                "cityPartModel": "Prague",
+                "cityPartLat": 50.088218898410375,
+                "cityPartLon": 14.402906651305639,
+                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
             }
         ]
         },
@@ -142,35 +190,50 @@
                     "cityPartHeader": "ŽIŽKOV TV TOWER",
                     "cityPartDescription": "A futuristic tower with crawling baby sculptures and panoramic views — weird, iconic, and unforgettable.",
                     "cityPartImage": "zizkovtower",
-                    "cityPartModel": "Prague"
+                    "cityPartModel": "Prague",
+                    "cityPartLat": 50.088218898410375,
+                    "cityPartLon": 14.402906651305639,
+                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
                 },
                 {
                     "cityPart": "olsanycemetery",
                     "cityPartHeader": "OLŠANY CEMETERY",
                     "cityPartDescription": "Prague’s largest cemetery, filled with ornate tombs, peaceful paths, and graves of famous Czech figures.",
                     "cityPartImage": "olsanycemetery",
-                    "cityPartModel": "Prague"
+                    "cityPartModel": "Prague",
+                    "cityPartLat": 50.088218898410375,
+                    "cityPartLon": 14.402906651305639,
+                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
                 },
                 {
                     "cityPart": "churchofsaintprocopius",
                     "cityPartHeader": "CHURCH OF ST. PROCOPIUS",
                     "cityPartDescription": "A beautiful Neo-Gothic church anchoring Sladkovského Square — a quiet architectural gem.",
                     "cityPartImage": "churchofsaintprocopius",
-                    "cityPartModel": "Prague"
+                    "cityPartModel": "Prague",
+                    "cityPartLat": 50.088218898410375,
+                    "cityPartLon": 14.402906651305639,
+                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
                 },
                 {
                     "cityPart": "akropolispalace",
                     "cityPartHeader": "AKROPOLIS PALACE",
                     "cityPartDescription": "One of Prague’s most eclectic cultural venues, offering concerts, theatre, and a bohemian bar vibe.",
                     "cityPartImage": "akropolispalace",
-                    "cityPartModel": "Prague"
+                    "cityPartModel": "Prague",
+                    "cityPartLat": 50.088218898410375,
+                    "cityPartLon": 14.402906651305639,
+                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
                 },
                 {
                     "cityPart": "vítkovnationalmonument",
                     "cityPartHeader": "VÍTKOV NATIONAL MONUMENT",
                     "cityPartDescription": "Crowned with the world’s largest equestrian statue, this hill offers sweeping city views and historic weight.",
                     "cityPartImage": "vitkovnationalmonument",
-                    "cityPartModel": "Prague"
+                    "cityPartModel": "Prague",
+                    "cityPartLat": 50.088218898410375,
+                    "cityPartLon": 14.402906651305639,
+                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"]
                 }
             ]
         }
