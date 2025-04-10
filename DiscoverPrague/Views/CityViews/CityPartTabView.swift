@@ -8,53 +8,41 @@
 import SwiftUI
 
 struct CityPartTabView: View {
-    @StateObject private var viewModel = CityViewModel()
-    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
-    var separator: String
-    var filteredCityParts: [CityPart] {
-        viewModel.cityAreas.first(where: { $0.separator == separator })?.cityParts ?? []
-    }
+    @EnvironmentObject var viewModel: CityViewModel
+    @Binding var path: NavigationPath
+    var cityArea: CityArea
     
     var body: some View {
-        NavigationStack {
-            TabView {
-                ForEach(filteredCityParts) { part in
-                    ZStack {
-                        Image(part.cityPartImage)
-                            .resizable()
-                            .scaledToFill()
-                            .ignoresSafeArea()
+        TabView {
+            ForEach(cityArea.cityParts) { part in
+                ZStack {
+                    Image(part.cityPartImage)
+                        .imageStyle()
+                    
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
+                        startPoint: .bottom,
+                        endPoint: .top)
+                    .ignoresSafeArea(.all)
+                    
+                    VStack {
+                        Text(part.cityPartHeader)
+                            .headerTextStyle()
                         
-                        LinearGradient(
-                                gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
-                                startPoint: .bottom,
-                                endPoint: .top
-                            )
-                            .ignoresSafeArea()
+                        Text(part.cityPartDescription)
+                            .descriptionTextStyle()
                         
-                        HStack {
-                            VStack {
-                                Text(part.cityPartHeader)
-                                    .headerTextStyle()
-                                
-                                Text(part.cityPartDescription)
-                                    .descriptionTextStyle()
-                                
-                                NavigationLink(destination: CityPartDetailView(city: part)) {
-                                    Text("Open Details")
-                                }
-                            }
+                        Button {
+                            path.append(part)
+                        } label: {
+                            Text("Open Details")
+                                .padding()
                         }
                     }
                 }
             }
-            .tabViewStyle(.page)
-            .ignoresSafeArea(.all)
         }
+        .tabViewStyle(.page)
+        .ignoresSafeArea()
     }
-}
-
-#Preview {
-    CityPartTabView(separator: "letná")
 }

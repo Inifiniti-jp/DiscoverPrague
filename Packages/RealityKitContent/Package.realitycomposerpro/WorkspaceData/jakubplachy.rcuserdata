@@ -2,7 +2,9 @@
   "advancedEditorSelectedIdentifier" : "ProjectBrowser",
   "openSceneRelativePaths" : [
     "BenchVolumetric.usda",
-    "Untitled Scene.usda"
+    "Prague.usda",
+    "Prague 2.usda",
+    "ColumnVolumetric.usda"
   ],
   "recentIdentifiers" : {
     "AF09ED6F-1707-48FD-8720-65B998362C09" : [
@@ -16,6 +18,54 @@
     ]
   },
   "sceneCameraHistory" : {
+    "52C52BA8-CABF-41D1-949E-5888E0FDA475" : [
+      {
+        "date" : 765984814.376073,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.7071069,
+          -0.70710677,
+          0,
+          0,
+          0.70710677,
+          0.7071069,
+          0,
+          0,
+          1.8490541,
+          1.8490543,
+          1
+        ]
+      }
+    ],
+    "79F28EC9-1893-40D3-A4F6-E84F98B3E9ED" : [
+      {
+        "date" : 765893727.944758,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.7071069,
+          -0.70710677,
+          0,
+          0,
+          0.70710677,
+          0.7071069,
+          0,
+          0,
+          0.72716963,
+          0.7271698,
+          1
+        ]
+      }
+    ],
     "AF09ED6F-1707-48FD-8720-65B998362C09" : [
       {
         "date" : 765298790.056336,

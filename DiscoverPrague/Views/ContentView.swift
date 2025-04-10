@@ -10,40 +10,37 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @State private var isAnimating = false
-    @State private var hasAnimated = false
+    @EnvironmentObject var viewModel: CityViewModel
+    @State private var path = NavigationPath()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ZStack {
                 Image("letná")
                     .resizable()
-                    .scaledToFill()                .ignoresSafeArea(.all)
+                    .scaledToFill()
+                    .ignoresSafeArea(.all)
                 
                 VStack {
                     Text("Discover Prague")
                         .headerTextStyle()
-                        .scaleEffect(isAnimating ? 1 : 0)
-                        .animation(.bouncy(duration: 3), value: isAnimating)
                     
-                    CityAreaScrollView()
-                        .opacity(isAnimating ? 1 : 0.5)
-                        .animation(.easeInOut(duration: 2), value: isAnimating)
+                    CityAreaScrollView(path: $path)
                         .padding()
                 }
             }
-        }
-        
-        // MARK: Defines the logic so that the animation occurs only once when the view is first rendered, so that it does not repeat every single time the view reappears.
-        .onAppear {
-            if !hasAnimated {
-                isAnimating.toggle()
-                hasAnimated = true
+            .navigationDestination(for: CityArea.self) { area in
+                CityPartTabView(path: $path, cityArea: area)
+            }
+            .navigationDestination(for: CityPart.self) { part in
+                CityPartDetailView(city: part)
             }
         }
     }
 }
 
+
 #Preview(windowStyle: .automatic) {
     ContentView()
+        .environmentObject(CityViewModel())
 }

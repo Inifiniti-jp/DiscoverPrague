@@ -55,4 +55,11 @@ extension View {
     }
 }
 
-
+extension Image {
+    func imageStyle() -> some View {
+       self
+            .resizable()
+            .scaledToFill()
+            .ignoresSafeArea(.all)
+    }
+}

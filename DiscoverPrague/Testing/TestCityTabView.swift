@@ -14,7 +14,7 @@ struct TestCityPartTabView: View {
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     var separator: String
     var filteredCityParts: [CityPart] {
-        viewModel.cityAreas.first(where: { $0.separator == separator })?.cityParts ?? []
+        viewModel.cityAreas.first(where: { $0.header == separator })?.cityParts ?? []
     }
     
     var body: some View {

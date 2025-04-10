@@ -8,38 +8,44 @@
 import SwiftUI
 
 struct CityAreaScrollView: View {
-    
-    @ObservedObject private var viewModel = CityViewModel()
+    @EnvironmentObject var viewModel: CityViewModel
+    @Binding var path: NavigationPath
     
     var body: some View {
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(viewModel.cityAreas, id: \.header) {
-                        location in
-                        NavigationLink(destination: TestCityPartTabView(separator: location.separator)) {
-                            ZStack {
-                                Image(location.image)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 400, height: 300)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                                    .padding()
-                                
-                                Text(location.header)
-                                    .navigationTextStyle()
-                            }
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(viewModel.cityAreas) { location in
+                    Button {
+                        path.append(location)
+                    } label: {
+                        ZStack {
+                            Image(location.image)
+                                .resizable()
+                                .foregroundStyle(LinearGradient(
+                                    gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
+                                    startPoint: .bottom,
+                                    endPoint: .top
+                                ))
+                                .scaledToFill()
+                                .frame(width: 400, height: 300)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .padding()
+                            
+                            Text(location.header)
+                                .navigationTextStyle()
                         }
-                        .buttonStyle(.plain)
-                        .buttonBorderShape(.roundedRectangle(radius: 20))
-                        .shadow(radius: 10)
-                        
                     }
+                    .buttonStyle(.plain)
+                    .buttonBorderShape(.roundedRectangle(radius: 20))
+                    .shadow(radius: 10)
                 }
+                .scrollIndicators(.hidden)
             }
-            .scrollIndicators(.hidden)
         }
     }
+}
 
 #Preview {
-    CityAreaScrollView()
+    CityAreaScrollView(path: .constant(NavigationPath()))
+        .environmentObject(CityViewModel())
 }

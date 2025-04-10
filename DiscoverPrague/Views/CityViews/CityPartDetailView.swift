@@ -11,6 +11,7 @@ import RealityKitContent
 import MapKit
 
 struct CityPartDetailView: View {
+    @EnvironmentObject var viewModel: CityViewModel
     let city: CityPart
     enum DetailSection {
         case home, gallery, models
@@ -59,17 +60,19 @@ struct CityPartDetailView: View {
                         }
                     }
                 }
-                
                 switch selectedSection {
                 case .home:
-                    CityPartDetailInfoView(header: city.cityPartHeader, description: city.cityPartDescription, coordinate: city.coordinate)
+                    CityPartDetailInfoView(city: city)
                         .padding()
+                    
                 case .gallery:
-                    TestGalleryView(imageNames: city.cityPartGallery)
+                    CityPartGalleryView(imageNames: city.cityPartGallery)
                         .padding()
+                        .environmentObject(viewModel)
                 case .models:
-                    CityVolumetricView()
+                    CityPartModelListView(city: city)
                         .padding()
+                        .environmentObject(viewModel)
                 }
             }
             .ignoresSafeArea(.all)

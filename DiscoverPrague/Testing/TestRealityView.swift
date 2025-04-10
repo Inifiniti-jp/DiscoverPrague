@@ -11,20 +11,25 @@ import RealityKitContent
 
 struct TestRealityView: View {
     @State private var angle = Angle(radians: 0.0)
+    @EnvironmentObject var viewModel: CityViewModel
     
     var body: some View {
         RealityView { content in
-            if let model = try? await Entity(named: "Prague", in: realityKitContentBundle) {
-                model.generateCollisionShapes(recursive: true)
-                model.components.set(InputTargetComponent())
-                content.add(model)
-                model.position = [0, 0, -1]
-                model.transform.rotation = simd_quatf(angle: 0.0, axis: [0, 1, 0])
+            if let modelName = viewModel.selectedModelName {
+                if let model = try? await Entity(named: modelName, in: realityKitContentBundle) {
+                    model.generateCollisionShapes(recursive: true)
+                    model.components.set(InputTargetComponent())
+                    content.add(model)
+                    model.position = [0, 0, -1]
+                    model.transform.rotation = simd_quatf(angle: 0.0, axis: [0, 1, 0])
+                    
+                }
             }
         }
         .gesture(dragGesture)
         .gesture(rotateGesture)
     }
+        
     
     // MARK: Gesture allowing the user to move the entity around the scene
     var dragGesture: some Gesture {

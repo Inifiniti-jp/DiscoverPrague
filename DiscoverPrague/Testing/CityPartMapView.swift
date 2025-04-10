@@ -10,8 +10,8 @@ import MapKit
 
 struct CityPartMapView: View {
     @State private var scene: MKLookAroundScene?
-    let coordinate: CLLocationCoordinate2D
     @State private var map = false
+    let coordinate: CLLocationCoordinate2D
     
     var body: some View {
         ZStack {
@@ -19,8 +19,8 @@ struct CityPartMapView: View {
                 LookAroundPreview(scene: $scene)
                     .lookAroundViewer(isPresented: $map, initialScene: scene)
                     .clipShape(Circle())
-                    .frame(maxWidth: 500)
-
+                    .frame(maxWidth: 400)
+                
             } else {
                 ProgressView("Loading Look Around...")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

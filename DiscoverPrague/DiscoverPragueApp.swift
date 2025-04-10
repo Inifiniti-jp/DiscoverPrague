@@ -11,54 +11,24 @@ import RealityKitContent
 
 @main
 struct DiscoverPragueApp: App {
-    @ObservedObject private var cityViewModel = CityViewModel()
-    @ObservedObject private var historyViewModel = HistoryViewModel()
+    @StateObject var viewModel = CityViewModel()
+    @State private var currentImmersionStyle: ImmersionStyle = .full
     
     var body: some SwiftUI.Scene {
         WindowGroup(id: "ContentView") {
-            TabView {
                 ContentView()
-                    .tabItem {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("Locations")
-                    }
-                HistoryView()
-                    .tabItem {
-                        Image(systemName: "timelapse")
-                        Text("History")
-                    }
             }
-        }
+            .environmentObject(viewModel)
         
-        WindowGroup(id: "PhotoGallery") {
-            PhotoGalleryView(separator: "")
-                .ignoresSafeArea(.all)
+        ImmersiveSpace(id: "360") {
+            CityPartImmersive360()
         }
-        .windowStyle(.plain)
-        .defaultWindowPlacement { content, context in
-            let size = content.sizeThatFits(.init(width: 600, height: 600))
-            let mainWindow = context.windows.first { window in
-                window.id == "ContentView"
-            }
-            if let mainWindow {
-                return WindowPlacement(.trailing(mainWindow), size: size)
-            }
-            return WindowPlacement(size: size)
-        }
-        
-        WindowGroup(id: "VolumeView") {
-            Model3D(named: "Prague", bundle: realityKitContentBundle) { model in
-                model
-                    .resizable()
-                    .scaledToFit()
-            } placeholder: {
-                ProgressView()
-            }
-        }
-        .windowStyle(.volumetric)
+        .immersionStyle(selection: $currentImmersionStyle, in: .full)
+        .environmentObject(viewModel)
         
         ImmersiveSpace(id: "ImmersiveSpace") {
             TestRealityView()
         }
+        .environmentObject(viewModel)
     }
 }
