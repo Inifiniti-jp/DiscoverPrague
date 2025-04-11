@@ -15,12 +15,12 @@ struct CityPartMapView: View {
     
     var body: some View {
         ZStack {
+            // MARK: Renders an interactive 3D map 
             if scene != nil {
                 LookAroundPreview(scene: $scene)
                     .lookAroundViewer(isPresented: $map, initialScene: scene)
                     .clipShape(Circle())
                     .frame(maxWidth: 400)
-                
             } else {
                 ProgressView("Loading Look Around...")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

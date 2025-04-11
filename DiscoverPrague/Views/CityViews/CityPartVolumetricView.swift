@@ -38,7 +38,6 @@ struct CityPartModelListView: View {
                             .foregroundStyle(.clear)
                             .background(.thinMaterial)
                             .cornerRadius(20)
-                        
                         Image(systemName: "view.3d")
                             .resizable()
                             .scaledToFit()

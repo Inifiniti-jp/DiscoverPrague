@@ -19,6 +19,7 @@ struct CityPartTabView: View {
                     Image(part.cityPartImage)
                         .imageStyle()
                     
+                    // MARK: Applies a sligthly darker gradient on top of background images for better text visibility
                     LinearGradient(
                         gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
                         startPoint: .bottom,
@@ -28,10 +29,8 @@ struct CityPartTabView: View {
                     VStack {
                         Text(part.cityPartHeader)
                             .headerTextStyle()
-                        
                         Text(part.cityPartDescription)
                             .descriptionTextStyle()
-                        
                         Button {
                             path.append(part)
                         } label: {

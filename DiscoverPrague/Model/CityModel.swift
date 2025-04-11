@@ -15,6 +15,7 @@ struct CityArea: Codable, Identifiable, Hashable {
     let image: String
     let cityParts: [CityPart]
 
+    // MARK: Handles separation of different data points in json
     private enum CodingKeys: String, CodingKey {
         case header, image, cityParts
     }
@@ -35,6 +36,7 @@ struct CityPart: Codable, Identifiable, Hashable {
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: cityPartLat, longitude: cityPartLon)
     }
+    // MARK: Handles separation of different data points in json
     private enum CodingKeys: String, CodingKey {
         case cityPart, cityPartHeader, cityPartDescription, cityPartImage,
              cityPartModel, cityPartLat, cityPartLon, cityPartGallery,

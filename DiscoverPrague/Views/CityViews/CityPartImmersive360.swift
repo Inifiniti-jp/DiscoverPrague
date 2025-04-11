@@ -9,6 +9,7 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+// MARK: A function handling the photo entity, wraps it as a texture inside a sphere and inverts the normals
 func createImmersivePicture(imageName : String) -> Entity {
     let modelEntity = Entity()
     let texture = try? TextureResource.load(named: imageName)

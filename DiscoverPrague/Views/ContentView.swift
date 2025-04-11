@@ -39,7 +39,6 @@ struct ContentView: View {
     }
 }
 
-
 #Preview(windowStyle: .automatic) {
     ContentView()
         .environmentObject(CityViewModel())

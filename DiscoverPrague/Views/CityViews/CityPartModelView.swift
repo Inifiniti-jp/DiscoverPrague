@@ -9,12 +9,14 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct TestRealityView: View {
+// MARK: This entire view is an unnecessary shit show, and will later be rewritten and reorganized to separate business logic from the view
+struct CityPartModelView: View {
     @State private var angle = Angle(radians: 0.0)
     @EnvironmentObject var viewModel: CityViewModel
     
     var body: some View {
         RealityView { content in
+            // MARK: Makes sure the correct appears based on its name
             if let modelName = viewModel.selectedModelName {
                 if let model = try? await Entity(named: modelName, in: realityKitContentBundle) {
                     model.generateCollisionShapes(recursive: true)
@@ -22,14 +24,12 @@ struct TestRealityView: View {
                     content.add(model)
                     model.position = [0, 0, -1]
                     model.transform.rotation = simd_quatf(angle: 0.0, axis: [0, 1, 0])
-                    
                 }
             }
         }
         .gesture(dragGesture)
         .gesture(rotateGesture)
     }
-        
     
     // MARK: Gesture allowing the user to move the entity around the scene
     var dragGesture: some Gesture {
@@ -65,11 +65,10 @@ struct TestRealityView: View {
 }
 
 #Preview {
-    TestRealityView()
+    CityPartModelView()
 }
 
 private var ogRotationKey: UInt8 = 0
-
 extension Entity {
     var ogRotation: simd_quatf? {
         get {

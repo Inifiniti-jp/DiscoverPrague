@@ -10,10 +10,10 @@ import MapKit
 
 struct CityPartDetailInfoView: View {
     @EnvironmentObject var viewModel: CityViewModel
-    let city: CityPart
-    @State private var isShowing360 = false
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @State private var isShowing360 = false
+    let city: CityPart
     
     var body: some View {
         HStack(alignment: .center ,spacing: 100) {

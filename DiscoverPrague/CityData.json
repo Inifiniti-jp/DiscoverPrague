@@ -13,7 +13,7 @@
                 "cityPartLon": 14.404140,
                 "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"],
                 "cityPartModels": ["Prague", "ColumnVolumetric"],
-                "cityPart360": "3602"
+                "cityPart360": "360"
             },
             {
                 "cityPart": "franzkafkamuseum",

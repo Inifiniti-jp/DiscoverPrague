@@ -27,7 +27,7 @@ struct DiscoverPragueApp: App {
         .environmentObject(viewModel)
         
         ImmersiveSpace(id: "ImmersiveSpace") {
-            TestRealityView()
+            CityPartModelView()
         }
         .environmentObject(viewModel)
     }

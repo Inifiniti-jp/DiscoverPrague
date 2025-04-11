@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+// MARK: IMPORTANT!!! - This view will be rewritten completely - This is a shit show atm :D 
+
 struct CityPartGalleryView: View {
     let imageNames: [String]
     @State private var selectedImage: GalleryImage? = nil
     
     var body: some View {
-        // MARK: Maps out the specific selected images from all available images.
+        // MARK: Maps out the selected images from all available images
         let galleryImages: [GalleryImage] = imageNames.map { GalleryImage(name: $0) }
         
         ZStack {
@@ -25,9 +27,7 @@ struct CityPartGalleryView: View {
                             .frame(width: 300, height: 200)
                             .clipped()
                             .cornerRadius(12)
-                            .onTapGesture {
-                                selectedImage = image
-                            }
+                            .onTapGesture { selectedImage = image }
                     }
                 }
                 .padding()
@@ -54,6 +54,7 @@ struct FullscreenImageView: View {
                         .resizable()
                         .scaledToFill()
                     
+                    // MARK: The whole view is a button for easily dismissing it
                     Button {
                         dismiss()
                     } label: {
