@@ -21,7 +21,7 @@ struct CityPartDetailView: View {
     var body: some View {
         ZStack {
             ZStack(alignment: .leading) {
-                // MARK: A map acting as a background for detailed view of a specific selected city part
+                // MARK: A map acting as a background for detailed view
                 Map(initialPosition: .region(MKCoordinateRegion(
                     center: city.coordinate,
                     span: MKCoordinateSpan(latitudeDelta: 0.0016, longitudeDelta: 0.0016)))) {
@@ -60,8 +60,6 @@ struct CityPartDetailView: View {
                         }
                     }
                 }
-                
-                // MARK: Handles the logic of displaying different subviews based on selection in toolbar
                 switch selectedSection {
                 case .home:
                     CityPartDetailInfoView(city: city)

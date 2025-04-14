@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct CityPartMapView: View {
+struct CityPartLookAroundView: View {
     @State private var scene: MKLookAroundScene?
     @State private var map = false
     let coordinate: CLLocationCoordinate2D
@@ -34,5 +34,5 @@ struct CityPartMapView: View {
 }
 
 #Preview {
-    CityPartMapView(coordinate: CLLocationCoordinate2D(latitude: 50.1096, longitude: 14.1))
+    CityPartLookAroundView(coordinate: CLLocationCoordinate2D(latitude: 50.1096, longitude: 14.1))
 }

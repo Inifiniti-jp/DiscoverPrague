@@ -11,7 +11,7 @@
                 "cityPartModel": "Prague",
                 "cityPartLat": 50.087690,
                 "cityPartLon": 14.404140,
-                "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"],
+                "cityPartGallery": ["saint_nicolas_church", "Saint Nicolaus"],
                 "cityPartModels": ["Prague", "ColumnVolumetric"],
                 "cityPart360": "360"
             },
@@ -35,7 +35,7 @@
                 "cityPartModel": "Prague",
                 "cityPartLat": 50.086617,
                 "cityPartLon": 14.410304,
-                "cityPartGallery": ["charles_bridge", "charles_bridge_night"],
+                "cityPartGallery": ["Charles Bridge 1", "Charles Bridge 2", "Charles Bridge 3", "Charles Bridge 4", "Charles Bridge 5", "Charles Bridge 6", "Charles Bridge 7"],
                 "cityPartModels": ["Prague"],
                 "cityPart360": "360"
             },
@@ -221,21 +221,21 @@
                     "cityPartModel": "Prague",
                     "cityPartLat": 50.080787,
                     "cityPartLon": 14.450648,
-                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"],
+                    "cityPartGallery": ["Žižkov Tower 1", "Žižkov Tower 2", "Žižkov Tower 3", "Žižkov Tower 4"],
                     "cityPartModels": ["Prague"],
-                    "cityPart360": "360"
+                    "cityPart360": "Žižkov Tower 360"
                 },
                 {
                     "cityPart": "olsanycemetery",
                     "cityPartHeader": "OLŠANY CEMETERY",
                     "cityPartDescription": "Prague’s largest cemetery, filled with ornate tombs, peaceful paths, and graves of famous Czech figures.",
-                    "cityPartImage": "olsanycemetery",
+                    "cityPartImage": "Olšany 2",
                     "cityPartModel": "Prague",
                     "cityPartLat": 50.080370,
                     "cityPartLon": 14.466028,
-                    "cityPartGallery": ["saint_nicolas_church", "franz_kafka_museum"],
-                    "cityPartModels": ["Prague"],
-                    "cityPart360": "360"
+                    "cityPartGallery": ["Olšany 1", "Olšany 2", "Olšany 3", "Olšany 4"],
+                    "cityPartModels": ["Gravestone 1", "Gravestone 2", "Gravestone 3", "Gravestone 4"],
+                    "cityPart360": "Olšany 360"
                 },
                 {
                     "cityPart": "churchofsaintprocopius",

@@ -12,12 +12,12 @@ struct CityPartDetailInfoView: View {
     @EnvironmentObject var viewModel: CityViewModel
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    @State private var isShowing360 = false
     let city: CityPart
+    @State private var isShowing360 = false
     
     var body: some View {
         HStack(alignment: .center ,spacing: 100) {
-            CityPartMapView(coordinate: city.coordinate)
+            CityPartLookAroundView(coordinate: city.coordinate)
             
             VStack {
                 Text(city.cityPartDescription)

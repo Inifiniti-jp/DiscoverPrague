@@ -1,0 +1,27 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.60.4)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Ols_any_Gravestone_4" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-3.1357198, 3.0559185, -2.979177)
+        }
+        prepend references = @Olšany Gravestone 4.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.99579597, -0.0005499664, 0.042920582, 0.080918506)
+        float3 xformOp:scale = (0.5, 0.5, 0.5)
+        float3 xformOp:translate = (0, -2.3283064e-10, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

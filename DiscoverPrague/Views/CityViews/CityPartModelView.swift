@@ -11,12 +11,11 @@ import RealityKitContent
 
 // MARK: This entire view is an unnecessary shit show, and will later be rewritten and reorganized to separate business logic from the view
 struct CityPartModelView: View {
-    @State private var angle = Angle(radians: 0.0)
     @EnvironmentObject var viewModel: CityViewModel
     
     var body: some View {
         RealityView { content in
-            // MARK: Makes sure the correct appears based on its name
+            // MARK: Makes sure the correct models appears based on its name
             if let modelName = viewModel.selectedModelName {
                 if let model = try? await Entity(named: modelName, in: realityKitContentBundle) {
                     model.generateCollisionShapes(recursive: true)
